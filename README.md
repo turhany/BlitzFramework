@@ -4,6 +4,8 @@
 
 Easy, extensible and fast implemented mini framework.
 
+[![NuGet version](https://badge.fury.io/nu/BlitzFramework.svg)](https://badge.fury.io/nu/BlitzFramework)
+
 #### Features:
 - Read to use Entity Framework(Core) Generic Repository Implementation
 - Read to use Distributed Redis Lock Service implementation (RedLock)
