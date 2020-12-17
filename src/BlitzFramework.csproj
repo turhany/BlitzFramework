@@ -8,7 +8,7 @@
     <Authors>Türhan Yıldırım</Authors>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/turhany/BlitzFramework</PackageProjectUrl>
-    <PackageIcon>blitzframework.png</PackageIcon>
+    <PackageIcon>logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/turhany/BlitzFramework</RepositoryUrl>
     <PackageTags>Framework</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -18,7 +18,11 @@
     <LangVersion>9</LangVersion>
   </PropertyGroup> 
 
-  <ItemGroup> 
+  <ItemGroup>
+    <None Include="..\img\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None> 
     <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
