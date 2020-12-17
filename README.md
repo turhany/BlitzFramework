@@ -17,3 +17,4 @@ Easy, extensible and fast implemented mini framework.
 
 ## TODOS
 * Sample microservice template project will be added
+* Release nuget package
