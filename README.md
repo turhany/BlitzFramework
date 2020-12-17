@@ -1,6 +1,6 @@
 # BlitzFramework
 
-![alt tag](https://raw.githubusercontent.com/turhany/BlitzFramework/main/img/blitzframework.png)  
+![alt tag](https://raw.githubusercontent.com/turhany/BlitzFramework/main/img/logo.png)  
 
 Easy, extensible and fast implemented mini framework.
 
