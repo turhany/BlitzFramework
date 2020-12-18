@@ -10,5 +10,7 @@
         public const string RedLockHostAddress = "RedLockHostAddress";
         public const string RedLockHostPassword = "RedLockHostPassword";
         public const string RedLockHostPort = "RedLockHostPort";
+
+        public const string JsonContentType = "application/json";
     }
 }
