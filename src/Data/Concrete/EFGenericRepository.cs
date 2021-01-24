@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using BlitzFramework.Constants;
 using BlitzFramework.Data.Abstract;
 using BlitzFramework.Data.Helpers;
 using BlitzFramework.Data.Models;
@@ -71,14 +72,14 @@ namespace BlitzFramework.Data.Concrete
         {
             var entity = await GetAsync(id);
             if (entity == null)
-                throw new ArgumentException(string.Format(Literals.DeleteItemNotFound, id));
+                throw new ArgumentException(string.Format(FrameworkConstants.DeleteItemNotFound, id));
 
             await RemoveAsync(entity, userId);
         }
 
         public async Task RemoveAsync(TEntity entity, object userId)
         {
-            if (entity.HasProperty(Literals.DeletedOnFieldName))
+            if (entity.HasProperty(FrameworkConstants.DeletedOnFieldName))
             {
                 _entities.Remove(entity);
                 await _databaseContext.SaveChangesAsync();

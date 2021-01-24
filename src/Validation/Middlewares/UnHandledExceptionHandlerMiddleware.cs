@@ -3,8 +3,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using BlitzFramework.Constants;
-using BlitzFramework.Data.Models;
-using BlitzFramework.Resources;
+using BlitzFramework.Data.Models; 
 using BlitzFramework.Validation.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
@@ -38,17 +37,17 @@ namespace BlitzFramework.Validation.Middlewares
                 response.Message = ex.ValidationResult.Errors.Select(p => p.ErrorMessage).FirstOrDefault();
                 
                 context.Response.StatusCode = (int)HttpStatusCode.OK;
-                context.Response.ContentType = AppConstants.JsonContentType;
+                context.Response.ContentType = FrameworkConstants.JsonContentType;
                 await context.Response.WriteAsync(JsonConvert.SerializeObject(response));
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, ex.Message);
                 response.ErrorCode = ((int)HttpStatusCode.InternalServerError).ToString();
-                response.Message = Literals.ServerError_Message;
+                response.Message = FrameworkConstants.ServerErrorMessage;
 
                 context.Response.StatusCode = (int)HttpStatusCode.OK;
-                context.Response.ContentType = AppConstants.JsonContentType;
+                context.Response.ContentType = FrameworkConstants.JsonContentType;
                 await context.Response.WriteAsync(JsonConvert.SerializeObject(response));
             }
         }

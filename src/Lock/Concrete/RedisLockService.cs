@@ -24,8 +24,8 @@ namespace BlitzFramework.Lock.Concrete
         {
             PasswordedServer = new RedLockEndPoint
             {
-                EndPoint = new DnsEndPoint(configuration[AppConstants.RedLockHostAddress], int.Parse(configuration[AppConstants.RedLockHostPort])),
-                Password = configuration[AppConstants.RedLockHostPassword],
+                EndPoint = new DnsEndPoint(configuration[FrameworkConstants.RedLockHostAddress], int.Parse(configuration[FrameworkConstants.RedLockHostPort])),
+                Password = configuration[FrameworkConstants.RedLockHostPassword],
                 Ssl = true
             };
         }

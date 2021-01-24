@@ -17,7 +17,7 @@ namespace BlitzFramework.Cache.Concrete
             _distributedCache = distributedCache;
         }
 
-        public T GetOrSetObject<T>(string key, Func<T> code, int durationAsMinute = AppConstants.DefaultCacheDuration)
+        public T GetOrSetObject<T>(string key, Func<T> code, int durationAsMinute = FrameworkConstants.DefaultCacheDuration)
         {
             if (ExistObject<T>(key))
             {
@@ -30,7 +30,7 @@ namespace BlitzFramework.Cache.Concrete
             return result;
         }
 
-        public void SetObject<T>(string key, T value, int durationAsMinute = AppConstants.DefaultCacheDuration)
+        public void SetObject<T>(string key, T value, int durationAsMinute = FrameworkConstants.DefaultCacheDuration)
         {
             key = $"{key}_{Thread.CurrentThread.CurrentUICulture.Name}";
             _distributedCache.SetString(key, JsonConvert.SerializeObject(value), new DistributedCacheEntryOptions
